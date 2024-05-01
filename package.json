@@ -1,0 +1,44 @@
+{
+    "name": "template-gatsby-html",
+    "private": true,
+    "description": "A simple starter to integrate HTML from themeforest.net quickly with Gatsby and TailwindCSS",
+    "version": "0.1.0",
+    "author": "Nguyen Le Anh Minh <anhminh2122000@gmail.com>",
+    "dependencies": {
+        "autoprefixer": "^10.4.19",
+        "classnames": "^2.5.1",
+        "gatsby": "^5.13.3",
+        "gatsby-plugin-image": "^3.13.1",
+        "gatsby-plugin-sharp": "^5.13.1",
+        "gatsby-source-contentful": "^8.13.1",
+        "gatsby-source-filesystem": "^5.13.1",
+        "gatsby-transformer-sharp": "^5.13.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2",
+        "prettier": "^3.2.5"
+    },
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\" --ignore-unknown",
+        "start": "gatsby develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "prepare": "husky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    },
+    "bugs": {
+        "url": "https://github.com/gatsbyjs/gatsby/issues"
+    },
+    "packageManager": "yarn@4.1.1"
+}
