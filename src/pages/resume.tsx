@@ -114,7 +114,7 @@ const ResumePage: React.FC<PageProps> = () => {
     return (
         <PageBody>
             <div className="page-title">
-                <h1>Nguyen Le Anh Minh</h1>
+                <h1>Nguyen Minh Thang</h1>
                 <div className="page-subtitle">
                     <h4>About 2 Years of Experience</h4>
                 </div>
@@ -130,12 +130,12 @@ const ResumePage: React.FC<PageProps> = () => {
                         <div id="timeline_1" className="timeline clearfix">
                             <div className="timeline-item clearfix">
                                 <h5 className="item-period">2018 - 2023</h5>
-                                <a href="https://dut.udn.vn" target="_blank" className="item-company">
-                                    Danang University of Science and Technology (DUT)
+                                <a href="https://vku.udn.vn/" target="_blank" className="item-company">
+                                    Vietnam–Korea University of Information and Communication Technology (VKU)
                                 </a>
                                 <h4 className="item-title">Software Engineer</h4>
                                 <p>
-                                    <strong>GPA:</strong> 3.44/4.0
+                                    <strong>GPA:</strong> 3.15/4.0
                                 </p>
                                 <p>Merges computer science with engineering practices, empowering to design, develop, and implement robust software systems.</p>
                                 <p>Participate in many researches and contests. Learned how to build a software by combining technology and SDLC.</p>
@@ -143,37 +143,13 @@ const ResumePage: React.FC<PageProps> = () => {
 
                             <div className="timeline-item clearfix">
                                 <h5 className="item-period">2022 - 2023</h5>
-                                <a href="https://funix.edu.vn" target="_blank" className="item-company">
-                                    FUNiX Online School
+                                <a href="https://mindx.edu.vn/" target="_blank" className="item-company">
+                                    Mindx - Technology School
                                 </a>
-                                <h4 className="item-title">Blockchain Developer</h4>
+                                <h4 className="item-title">Mobile App (React Native)</h4>
                                 <p>
-                                    Understanding of how blockchain systems function. Exploring smart contracts and decentralized applications (DApps), culminating in the
-                                    integration of a DApp into a website. To solidify my knowledge, Constructed a private blockchain and developed related blockchain services.
-                                </p>
-                            </div>
-
-                            <div className="timeline-item clearfix">
-                                <h5 className="item-period">2020 - 2021</h5>
-                                <a href="https://school.coders-x.com" target="_blank" className="item-company">
-                                    CoderX Online School
-                                </a>
-                                <h4 className="item-title">Full-stack Web Developer</h4>
-                                <p>
-                                    Gained foundational knowledge in web development technologies by completing a course that covered JavaScript, HTML, CSS, and Node.js.
-                                    Additionally, explored version control using Git and furthered development skills by learning React and TypeScript.
-                                </p>
-                            </div>
-
-                            <div className="timeline-item clearfix">
-                                <h5 className="item-period">2018 - 2019</h5>
-                                <a href="https://howkteam.vn" target="_blank" className="item-company">
-                                    KTeam Free Education
-                                </a>
-                                <h4 className="item-title">C# Developer</h4>
-                                <p>
-                                    Began with a course that introduced me to the C# language, focusing on Object-Oriented Programming (OOP) principles. Leveraged ASP.NET MVC to
-                                    construct a Model-View-Controller website, utilizing Entity Framework to facilitate database interaction.
+                                    Dive into the world of React Native app development. Gain expertise in UI design, navigation, and deployment to create polished cross-platform
+                                    applications.
                                 </p>
                             </div>
                         </div>
@@ -186,22 +162,36 @@ const ResumePage: React.FC<PageProps> = () => {
 
                         <div id="timeline_2" className="timeline clearfix">
                             <div className="timeline-item clearfix">
-                                <h5 className="item-period current">2022 - Current</h5>
-                                <a href="https://www.napaglobal.com" target="_blank" className="item-company">
-                                    NAPA Global
+                                <h5 className="item-period">2023 - Current</h5>
+                                <a href="https://dut.udn.vn/khoacntt" target="_blank" className="item-company">
+                                    VACS Vietnam Limited Liability Company
+                                </a>
+                                <h4 className="item-title">Full-Stack Web Developer:</h4>
+                                <p>
+                                    As a full-stack developer, I've handled frontend and backend tasks in software outsourcing projects. I've also ventured into developing
+                                    immersive 3D web applications and web panorama experiences. Implementing CI/CD pipelines via GitHub, GitLab and Docker has been crucial for
+                                    ensuring reliable deployment
+                                </p>
+                                <p>
+                                    Moreover, I've established an internal GitLab server to streamline our development workflows and ensure secure version control within our
+                                    organization.
+                                </p>
+                            </div>
+
+                            <div className="timeline-item clearfix">
+                                <h5 className="item-period current">2022 - 2023</h5>
+                                <a href="http://lssvietnam.com/" target="_blank" className="item-company">
+                                    LSS VIETNAM TECHNOLOGY AND SERVICES
                                 </a>
                                 <h4 className="item-title">Full-stack Developer</h4>
                                 <p>
-                                    <strong>Blockchain Developer:</strong> Honed skills in smart contract development and integrating blockchain technology into decentralized
-                                    applications (DApps).
+                                    <strong>Full-Stack Web Developer:</strong>
+                                    As a fullstack developer, contributed to software outsourcing projects, handling both frontend and backend tasks. Implemented CI/CD pipelines
+                                    via GitHub, GitLab and Docker for automated deployment to production, ensuring reliable delivery.
                                 </p>
                                 <p>
-                                    <strong>Full-Stack Web Developer:</strong> Contributed to various outsourcing projects. This experience broadened skill-sets by allowing to work
-                                    with data and participate in the development of a platform for a Hackathon.
-                                </p>
-                                <p>
-                                    <strong>Maintainer: </strong> working on other languages and frameworks such as Ruby, C++ and AWS. Currently, supporting deploy a Wallet project
-                                    as a DevOps Developer.
+                                    <strong>Tech stack: </strong> Utilized NestJS and Next.js for backend and frontend development, incorporating Socket.io for real-time
+                                    functionality. Integrated payment gateways such as Stripe and PayPal for enhanced functionality.
                                 </p>
                             </div>
 
@@ -224,61 +214,7 @@ const ResumePage: React.FC<PageProps> = () => {
                                     technology and its potential and using technology to solve real-world problems.
                                 </p>
                             </div>
-
-                            <div className="timeline-item clearfix">
-                                <h5 className="item-period">2020 - 2023</h5>
-                                <a href="https://dut.udn.vn/khoacntt" target="_blank" className="item-company">
-                                    Information Technology Faculty - DUT
-                                </a>
-                                <h4 className="item-title">Researcher</h4>
-                                <p>Motivated to explore the intersection of computer vision (CV) with AI in agriculture, GIS and remote sensing.</p>
-                                <p>
-                                    Driven by the potential to leverage CV techniques to analyze vast datasets from satellites and drones, ultimately contributing to more
-                                    sustainable and productive farming practices.
-                                </p>
-                                <p>
-                                    Developed innovative applications addressing farming issues and built a agricultural startup. Acquired several noteworthy certificates and
-                                    awards.
-                                </p>
-                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className=" col-xs-12 col-sm-12 ">
-                        <div className="block-title p-20">
-                            <h2>Language & Efficiency</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className=" col-xs-12 col-sm-6 ">
-                        <a href="/img/resume/toeic-certificate.jpg" className="lightbox">
-                            <div className="certificate-item clearfix">
-                                <div className="certi-logo">
-                                    <img src="/img/resume/toeic-logo.png" alt="logo" />
-                                </div>
-
-                                <div className="certi-content">
-                                    <div className="certi-title">
-                                        <h4>TOEIC: 765 Points</h4>
-                                    </div>
-
-                                    <div className="certi-id">
-                                        <span>Valid until 27 February 2026</span>
-                                    </div>
-                                    <div className="certi-date">
-                                        <span>27 February 2024</span>
-                                    </div>
-
-                                    <div className="certi-company">
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
 

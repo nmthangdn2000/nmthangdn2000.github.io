@@ -3,7 +3,7 @@
     "private": true,
     "description": "A simple starter to integrate HTML from themeforest.net quickly with Gatsby and TailwindCSS",
     "version": "0.1.0",
-    "author": "Nguyen Le Anh Minh <anhminh2122000@gmail.com>",
+    "author": "Nguyen Minh Thang <nmthangdn2000@gmail.com>",
     "dependencies": {
         "autoprefixer": "^10.4.19",
         "classnames": "^2.5.1",

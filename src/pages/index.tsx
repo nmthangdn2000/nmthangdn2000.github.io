@@ -13,22 +13,22 @@ const HomePage: React.FC<PageProps> = () => {
                 "Well-versed in both front-end technologies like HTML, CSS, and JavaScript, and back-end languages and frameworks. Implement user-friendly interfaces, build robust functionality, and ensure seamless data handling within web applications.",
         },
         {
-            icon: "linecons-data",
-            title: "Data Analyzing",
+            icon: "linecons-settings",
+            title: "DevOps & Automation",
             description:
-                "With strong data analysis skills. Can clean, explore, and analyze complex datasets, leveraging statistical methods to uncover trends and patterns. Creating clear and compelling data visualizations to communicate findings effectively.",
+                "Skilled in setting up CI/CD pipelines with GitLab and GitHub Actions, leveraging Docker for efficient containerization. Collaborate with teams to automate testing, code reviews, and deployment workflows, ensuring reliable and rapid software releases.",
         },
         {
-            icon: "linecons-bulb",
-            title: "AI Engineering",
+            icon: "linecons-diamond",
+            title: "3D Web Development",
             description:
-                "Strong background in AI engineering. Bridge the gap between theoretical AI concepts and real-world applications. Skilled in building, deploying, and optimizing machine learning models, along with designing and managing the infrastructure.",
+                "Skilled in crafting immersive 3D web experiences featuring panoramic views and seamlessly interacting with intricate 3D models using Three.js and WebGL, ensuring engaging user experiences and dynamic digital environments.",
         },
         {
-            icon: "linecons-world",
-            title: "Blockchain",
+            icon: "linecons-phone",
+            title: "Mobile Development",
             description:
-                "Strong understanding of blockchain architecture, cryptography principles, and smart contracts. Allows to develop innovative blockchain-based solutions, integrate them with existing systems, and ensure their security and efficiency.",
+                "Skilled in cross-platform mobile development with React Native and Flutter, I leverage reusable code for efficient development and prioritize intuitive UIs to build high-performing, native-feeling apps for both iOS and Android.",
         },
     ];
 
@@ -51,14 +51,19 @@ const HomePage: React.FC<PageProps> = () => {
             link: "https://www.javascript.com",
         },
         {
-            name: "Python",
-            logo: "/img/programming-languages/python-logo.png",
-            link: "https://www.python.org",
+            name: "TypeScript",
+            logo: "/img/programming-languages/typescript-logo.png",
+            link: "https://www.typescriptlang.org",
         },
         {
-            name: "C#",
-            logo: "/img/programming-languages/c-sharp-logo.png",
-            link: "https://docs.microsoft.com/en-us/dotnet/csharp",
+            name: "NodeJS",
+            logo: "/img/programming-languages/nodejs-logo.png",
+            link: "https://nodejs.org",
+        },
+        {
+            name: "NestJS",
+            logo: "/img/programming-languages/nestjs-logo.png",
+            link: "https://nestjs.com",
         },
         {
             name: "ReactJS",
@@ -71,9 +76,9 @@ const HomePage: React.FC<PageProps> = () => {
             link: "https://reactjs.org",
         },
         {
-            name: "Tensorflow",
-            logo: "/img/programming-languages/tensorflow-logo.png",
-            link: "https://www.tensorflow.org",
+            name: "Flutter",
+            logo: "/img/programming-languages/flutter-logo.png",
+            link: "https://flutter.dev",
         },
         {
             name: "PostgreSQL",
@@ -112,24 +117,16 @@ const HomePage: React.FC<PageProps> = () => {
                                             <div className="item">
                                                 <h4>Full-stack Developer</h4>
                                             </div>
-
-                                            <div className="item">
-                                                <h4>AI Engineer</h4>
-                                            </div>
-
-                                            <div className="item">
-                                                <h4>Blockchain Developer</h4>
-                                            </div>
                                         </div>
 
-                                        <h1>Nguyen Le Anh Minh</h1>
+                                        <h1>Nguyen Minh Thang</h1>
                                         <p>
-                                            Eager to adopt and learn new technologies. Enthusiastic to attend a Master of Computer Science in order to understand and apply
-                                            different Computer Science concepts.
+                                            Always eager to learn and adapt, I focus on mastering software engineering principles and embracing new technologies for impactful
+                                            solutions.
                                         </p>
 
                                         <div className="home-buttons">
-                                            <a href="/assets/NguyenLeAnhMinh_CV.pdf" download="NguyenLeAnhMinh_CV.pdf" className="btn btn-primary">
+                                            <a href="/assets/NguyenMinhThang_CV.pdf" download="NguyenMinhThang_CV.pdf" className="btn btn-primary">
                                                 Download CV
                                             </a>
                                             <a href="/contact" target="_self" className="btn btn-secondary">

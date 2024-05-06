@@ -51,9 +51,9 @@ const PageBody: React.FC<{
                             {/* <!-- Text Logo --> */}
                             <div className="text-logo">
                                 <a href="/">
-                                    <div className="logo-symbol">M</div>
+                                    <div className="logo-symbol">T</div>
                                     <div className="logo-text">
-                                        Minh <span>Nguyen</span>
+                                        Thang <span>Nguyen</span>
                                     </div>
                                 </a>
                             </div>
@@ -102,27 +102,21 @@ const PageBody: React.FC<{
                         <div className="footer-social">
                             <ul className="footer-social-links">
                                 <li>
-                                    <a href="https://github.com/nabatti99" target="_blank">
+                                    <a href="https://github.com/nmthangdn2000" target="_blank">
                                         Github
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="https://www.facebook.com/nguyenanhminh02" target="_blank">
+                                    <a href="https://www.facebook.com/minh.thang.03112000" target="_blank">
                                         Facebook
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://t.me/nabatti99" target="_blank">
-                                        Telegram
                                     </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="footer-copyrights">
-                            <p>Nguyen Le Anh Minh - Full-stack Developer</p>
+                            <p>Nguyen Minh Thang - Full-stack Developer</p>
                         </div>
                     </footer>
                     {/* <!-- /Footer --> */}

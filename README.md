@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Nguyễn Lê Anh Minh's Portfolio
+  Nguyễn Minh Thắng's Portfolio
 </h1>
 
 A website to introduce about me, my experiences, my projects and anything you want to know.
