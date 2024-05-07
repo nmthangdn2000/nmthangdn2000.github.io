@@ -39,11 +39,6 @@ const ProjectPage: React.FC<PageProps> = () => {
                                 </li>
 
                                 <li>
-                                    <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.NAPA_GLOBAL}>
-                                        NAPA Global
-                                    </a>
-                                </li>
-                                <li>
                                     <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.WEB_DEVELOPMENT}>
                                         Web Development
                                     </a>
@@ -61,11 +56,6 @@ const ProjectPage: React.FC<PageProps> = () => {
                                 <li>
                                     <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.DATA_ANALYZING}>
                                         Data Analyzing
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.BLOCKCHAIN}>
-                                        Blockchain
                                     </a>
                                 </li>
                             </ul>
