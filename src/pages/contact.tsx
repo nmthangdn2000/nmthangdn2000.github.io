@@ -53,8 +53,7 @@ const ContactPage: React.FC<PageProps> = () => {
                         <div className="block-title">
                             <h2>How Can I Help You?</h2>
                         </div>
-
-                        <form id="contact_form" className="contact-form" action="contact_form/contact_form.php" method="post">
+                        <form id="contact_form" action="https://formbold.com/s/3qR1O" className="contact-form" method="post">
                             <div className="messages"></div>
 
                             <div className="controls two-columns">
@@ -121,7 +120,9 @@ const ContactPage: React.FC<PageProps> = () => {
 
                                 <div className="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"></div>
 
-                                <input type="submit" className="button btn-send disabled" value="Send message" />
+                                <button type="submit" className="button btn-send disabled">
+                                    <span>Send message</span>
+                                </button>
                             </div>
                         </form>
                     </div>

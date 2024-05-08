@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="csrf-token" content="VX6TPbKAPI2204tFa9rbklb94XhW7YrwqJBLYO44" />
+
+        <title inertia>FormBold</title>
+
+        <link rel="icon" type="image/png" href="https://formbold.com/favicon.png" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+
+        <!-- Scripts -->
+        <script type="text/javascript">
+            const Ziggy = {
+                url: "https:\/\/app.formbold.com",
+                port: null,
+                defaults: {},
+                routes: {
+                    "filament.asset": { uri: "filament\/assets\/{file}", methods: ["GET", "HEAD"], wheres: { file: ".*" } },
+                    "filament.auth.logout": { uri: "filament\/logout", methods: ["POST"] },
+                    "filament.pages.dashboard": { uri: "admin", methods: ["GET", "HEAD"] },
+                    "filament.resources.code-snippets.index": { uri: "admin\/code-snippets", methods: ["GET", "HEAD"] },
+                    "filament.resources.code-snippets.create": { uri: "admin\/code-snippets\/create", methods: ["GET", "HEAD"] },
+                    "filament.resources.code-snippets.edit": { uri: "admin\/code-snippets\/{record}\/edit", methods: ["GET", "HEAD"] },
+                    "filament.resources.laravel\/paddle\/customers.index": { uri: "admin\/laravel\/paddle\/customers", methods: ["GET", "HEAD"] },
+                    "filament.resources.laravel\/paddle\/customers.create": { uri: "admin\/laravel\/paddle\/customers\/create", methods: ["GET", "HEAD"] },
+                    "filament.resources.laravel\/paddle\/customers.edit": { uri: "admin\/laravel\/paddle\/customers\/{record}\/edit", methods: ["GET", "HEAD"] },
+                    "filament.resources.forms.index": { uri: "admin\/forms", methods: ["GET", "HEAD"] },
+                    "filament.resources.billing\/plans.index": { uri: "admin\/billing\/plans", methods: ["GET", "HEAD"] },
+                    "filament.resources.billing\/plans.create": { uri: "admin\/billing\/plans\/create", methods: ["GET", "HEAD"] },
+                    "filament.resources.billing\/plans.edit": { uri: "admin\/billing\/plans\/{record}\/edit", methods: ["GET", "HEAD"] },
+                    "filament.resources.billing\/subscriptions.index": { uri: "admin\/billing\/subscriptions", methods: ["GET", "HEAD"] },
+                    "filament.resources.billing\/subscriptions.create": { uri: "admin\/billing\/subscriptions\/create", methods: ["GET", "HEAD"] },
+                    "filament.resources.billing\/subscriptions.edit": { uri: "admin\/billing\/subscriptions\/{record}\/edit", methods: ["GET", "HEAD"] },
+                    "filament.resources.users.index": { uri: "admin\/users", methods: ["GET", "HEAD"] },
+                    "filament.resources.users.edit": { uri: "admin\/users\/{record}\/edit", methods: ["GET", "HEAD"] },
+                    "horizon.stats.index": { uri: "horizon\/api\/stats", methods: ["GET", "HEAD"] },
+                    "horizon.workload.index": { uri: "horizon\/api\/workload", methods: ["GET", "HEAD"] },
+                    "horizon.masters.index": { uri: "horizon\/api\/masters", methods: ["GET", "HEAD"] },
+                    "horizon.monitoring.index": { uri: "horizon\/api\/monitoring", methods: ["GET", "HEAD"] },
+                    "horizon.monitoring.store": { uri: "horizon\/api\/monitoring", methods: ["POST"] },
+                    "horizon.monitoring-tag.paginate": { uri: "horizon\/api\/monitoring\/{tag}", methods: ["GET", "HEAD"] },
+                    "horizon.monitoring-tag.destroy": { uri: "horizon\/api\/monitoring\/{tag}", methods: ["DELETE"] },
+                    "horizon.jobs-metrics.index": { uri: "horizon\/api\/metrics\/jobs", methods: ["GET", "HEAD"] },
+                    "horizon.jobs-metrics.show": { uri: "horizon\/api\/metrics\/jobs\/{id}", methods: ["GET", "HEAD"] },
+                    "horizon.queues-metrics.index": { uri: "horizon\/api\/metrics\/queues", methods: ["GET", "HEAD"] },
+                    "horizon.queues-metrics.show": { uri: "horizon\/api\/metrics\/queues\/{id}", methods: ["GET", "HEAD"] },
+                    "horizon.jobs-batches.index": { uri: "horizon\/api\/batches", methods: ["GET", "HEAD"] },
+                    "horizon.jobs-batches.show": { uri: "horizon\/api\/batches\/{id}", methods: ["GET", "HEAD"] },
+                    "horizon.jobs-batches.retry": { uri: "horizon\/api\/batches\/retry\/{id}", methods: ["POST"] },
+                    "horizon.pending-jobs.index": { uri: "horizon\/api\/jobs\/pending", methods: ["GET", "HEAD"] },
+                    "horizon.completed-jobs.index": { uri: "horizon\/api\/jobs\/completed", methods: ["GET", "HEAD"] },
+                    "horizon.failed-jobs.index": { uri: "horizon\/api\/jobs\/failed", methods: ["GET", "HEAD"] },
+                    "horizon.failed-jobs.show": { uri: "horizon\/api\/jobs\/failed\/{id}", methods: ["GET", "HEAD"] },
+                    "horizon.retry-jobs.show": { uri: "horizon\/api\/jobs\/retry\/{id}", methods: ["POST"] },
+                    "horizon.jobs.show": { uri: "horizon\/api\/jobs\/{id}", methods: ["GET", "HEAD"] },
+                    "horizon.index": { uri: "horizon\/{view?}", methods: ["GET", "HEAD"], wheres: { view: "(.*)" } },
+                    "livewire.message": { uri: "livewire\/message\/{name}", methods: ["POST"] },
+                    "livewire.upload-file": { uri: "livewire\/upload-file", methods: ["POST"] },
+                    "livewire.preview-file": { uri: "livewire\/preview-file\/{filename}", methods: ["GET", "HEAD"] },
+                    "forms.submissions.store": { uri: "s\/{form}", methods: ["POST"], bindings: { form: "id" } },
+                    "api.share-form": { uri: "api\/share-form\/{form}", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "api.form-attachments": { uri: "api\/form-attachments\/{form}\/{file_name}", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "api.password.reset": { uri: "api\/auth\/reset-password\/{token}", methods: ["GET", "HEAD"] },
+                    "api.password.update": { uri: "api\/auth\/reset-password", methods: ["POST"] },
+                    "api.verification.verify": { uri: "api\/auth\/verify-email\/{id}\/{hash}", methods: ["GET", "HEAD"] },
+                    "api.forms.duplicate": { uri: "api\/forms\/{form}\/duplicate", methods: ["POST"], bindings: { form: "id" } },
+                    "api.allowed-domains.store": { uri: "api\/forms\/{form}\/allowed-domains", methods: ["POST"], bindings: { form: "id" } },
+                    "api.allowed-domains.destroy": { uri: "api\/forms\/{form}\/allowed-domains\/{domain}", methods: ["DELETE"], bindings: { form: "id" } },
+                    register: { uri: "register", methods: ["GET", "HEAD"] },
+                    login: { uri: "login", methods: ["GET", "HEAD"] },
+                    "password.request": { uri: "forgot-password", methods: ["GET", "HEAD"] },
+                    "password.email": { uri: "forgot-password", methods: ["POST"] },
+                    "password.reset": { uri: "reset-password\/{token}", methods: ["GET", "HEAD"] },
+                    "password.update": { uri: "reset-password", methods: ["POST"] },
+                    "verification.notice": { uri: "verify-email", methods: ["GET", "HEAD"] },
+                    "verification.verify": { uri: "verify-email\/{id}\/{hash}", methods: ["GET", "HEAD"] },
+                    "verification.send": { uri: "email\/verification-notification", methods: ["POST"] },
+                    "password.confirm": { uri: "confirm-password", methods: ["GET", "HEAD"] },
+                    logout: { uri: "logout", methods: ["POST"] },
+                    dashboard: { uri: "\/", methods: ["GET", "HEAD"] },
+                    billing: { uri: "billing", methods: ["GET", "HEAD"] },
+                    subscription: { uri: "subscription", methods: ["POST"] },
+                    invoice: { uri: "invoice", methods: ["GET", "HEAD"] },
+                    "forms.index": { uri: "forms", methods: ["GET", "HEAD"] },
+                    "forms.store": { uri: "forms", methods: ["POST"] },
+                    "forms.show": { uri: "forms\/{form}", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "forms.edit": { uri: "forms\/{form}\/edit", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "forms.update": { uri: "forms\/{form}", methods: ["PUT", "PATCH"], bindings: { form: "id" } },
+                    "forms.destroy": { uri: "forms\/{form}", methods: ["DELETE"], bindings: { form: "id" } },
+                    "forms.duplicate": { uri: "forms\/{form}\/duplicate", methods: ["POST"], bindings: { form: "id" } },
+                    "forms.submissions.index": { uri: "forms\/{form}\/submissions", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "forms.submissions.export": { uri: "forms\/{form}\/submissions\/export", methods: ["POST"], bindings: { form: "id" } },
+                    "allowed-domains.store": { uri: "forms\/{form}\/allowed-domains", methods: ["POST"], bindings: { form: "id" } },
+                    "allowed-domains.destroy": { uri: "forms\/{form}\/allowed-domains\/{domain}", methods: ["DELETE"], bindings: { form: "id" } },
+                    "forms.plugins.index": { uri: "forms\/{form}\/plugins", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "forms.plugins.webhooks.store": { uri: "forms\/{form}\/plugins\/webhooks", methods: ["POST"], bindings: { form: "id" } },
+                    "forms.plugins.update": { uri: "plugins\/{plugin}", methods: ["PUT"], bindings: { plugin: "id" } },
+                    "plugins.destroy": { uri: "plugins\/{plugin}", methods: ["DELETE"], bindings: { plugin: "id" } },
+                    "plugins.resources.index": { uri: "plugins\/{plugin}\/resources", methods: ["GET", "HEAD"], bindings: { plugin: "id" } },
+                    "forms.plugins.telegram.store": { uri: "forms\/{form}\/plugins\/telegram\/callback", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "forms.plugins.slack.create": { uri: "forms\/{form}\/plugins\/slack", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "forms.plugins.notion.create": { uri: "forms\/{form}\/plugins\/notion", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "forms.plugins.google.create": { uri: "forms\/{form}\/plugins\/google", methods: ["GET", "HEAD"], bindings: { form: "id" } },
+                    "forms.plugins.google-sheet.store": { uri: "callback\/google-sheet", methods: ["GET", "HEAD"] },
+                    "forms.plugins.auto-response.store": { uri: "forms\/{form}\/plugins\/auto-responder", methods: ["POST"], bindings: { form: "id" } },
+                    settings: { uri: "account", methods: ["GET", "HEAD"] },
+                    "account.update": { uri: "account", methods: ["PUT"] },
+                    "user-password.update": { uri: "account\/password", methods: ["PUT"] },
+                    "account.timezone.store": { uri: "account\/timezone", methods: ["POST"] },
+                    "account.destroy": { uri: "account\/{user}\/delete", methods: ["DELETE"], bindings: { user: "id" } },
+                    "email-addresses.store": { uri: "email-addresses", methods: ["POST"] },
+                    "email-addresses.destroy": { uri: "email-addresses\/{emailAddress}", methods: ["DELETE"], bindings: { emailAddress: "id" } },
+                    "api-tokens.index": { uri: "user\/api-tokens", methods: ["GET", "HEAD"] },
+                    "api-tokens.store": { uri: "user\/api-tokens", methods: ["POST"] },
+                    "api-tokens.update": { uri: "user\/api-tokens\/{token}", methods: ["PUT"] },
+                    "api-tokens.destroy": { uri: "user\/api-tokens\/{token}", methods: ["DELETE"] },
+                    "social-login": { uri: "login\/{provider}", methods: ["GET", "HEAD"] },
+                    "paddle.webhook": { uri: "paddle\/webhook", methods: ["POST"] },
+                    "user-activations.show": { uri: "user-activations\/{activation}", methods: ["GET", "HEAD"] },
+                    "user-activations.store": { uri: "user-activations\/{activation}", methods: ["POST"] },
+                    "impersonate.leave": { uri: "impersonate\/leave", methods: ["GET", "HEAD"] },
+                },
+            };
+
+            !(function (t, r) {
+                "object" == typeof exports && "undefined" != typeof module
+                    ? (module.exports = r())
+                    : "function" == typeof define && define.amd
+                      ? define(r)
+                      : ((t || self).route = r());
+            })(this, function () {
+                function t(t, r) {
+                    for (var e = 0; e < r.length; e++) {
+                        var n = r[e];
+                        (n.enumerable = n.enumerable || !1), (n.configurable = !0), "value" in n && (n.writable = !0), Object.defineProperty(t, n.key, n);
+                    }
+                }
+                function r(r, e, n) {
+                    return e && t(r.prototype, e), n && t(r, n), Object.defineProperty(r, "prototype", { writable: !1 }), r;
+                }
+                function e() {
+                    return (
+                        (e = Object.assign
+                            ? Object.assign.bind()
+                            : function (t) {
+                                  for (var r = 1; r < arguments.length; r++) {
+                                      var e = arguments[r];
+                                      for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+                                  }
+                                  return t;
+                              }),
+                        e.apply(this, arguments)
+                    );
+                }
+                function n(t) {
+                    return (
+                        (n = Object.setPrototypeOf
+                            ? Object.getPrototypeOf.bind()
+                            : function (t) {
+                                  return t.__proto__ || Object.getPrototypeOf(t);
+                              }),
+                        n(t)
+                    );
+                }
+                function o(t, r) {
+                    return (
+                        (o = Object.setPrototypeOf
+                            ? Object.setPrototypeOf.bind()
+                            : function (t, r) {
+                                  return (t.__proto__ = r), t;
+                              }),
+                        o(t, r)
+                    );
+                }
+                function i() {
+                    if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
+                    if (Reflect.construct.sham) return !1;
+                    if ("function" == typeof Proxy) return !0;
+                    try {
+                        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                    } catch (t) {
+                        return !1;
+                    }
+                }
+                function u(t, r, e) {
+                    return (
+                        (u = i()
+                            ? Reflect.construct.bind()
+                            : function (t, r, e) {
+                                  var n = [null];
+                                  n.push.apply(n, r);
+                                  var i = new (Function.bind.apply(t, n))();
+                                  return e && o(i, e.prototype), i;
+                              }),
+                        u.apply(null, arguments)
+                    );
+                }
+                function f(t) {
+                    var r = "function" == typeof Map ? new Map() : void 0;
+                    return (
+                        (f = function (t) {
+                            if (null === t || -1 === Function.toString.call(t).indexOf("[native code]")) return t;
+                            if ("function" != typeof t) throw new TypeError("Super expression must either be null or a function");
+                            if (void 0 !== r) {
+                                if (r.has(t)) return r.get(t);
+                                r.set(t, e);
+                            }
+                            function e() {
+                                return u(t, arguments, n(this).constructor);
+                            }
+                            return (e.prototype = Object.create(t.prototype, { constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 } })), o(e, t);
+                        }),
+                        f(t)
+                    );
+                }
+                var a = String.prototype.replace,
+                    c = /%20/g,
+                    l = "RFC3986",
+                    s = {
+                        default: l,
+                        formatters: {
+                            RFC1738: function (t) {
+                                return a.call(t, c, "+");
+                            },
+                            RFC3986: function (t) {
+                                return String(t);
+                            },
+                        },
+                        RFC1738: "RFC1738",
+                        RFC3986: l,
+                    },
+                    v = Object.prototype.hasOwnProperty,
+                    p = Array.isArray,
+                    y = (function () {
+                        for (var t = [], r = 0; r < 256; ++r) t.push("%" + ((r < 16 ? "0" : "") + r.toString(16)).toUpperCase());
+                        return t;
+                    })(),
+                    d = function (t, r) {
+                        for (var e = r && r.plainObjects ? Object.create(null) : {}, n = 0; n < t.length; ++n) void 0 !== t[n] && (e[n] = t[n]);
+                        return e;
+                    },
+                    b = {
+                        arrayToObject: d,
+                        assign: function (t, r) {
+                            return Object.keys(r).reduce(function (t, e) {
+                                return (t[e] = r[e]), t;
+                            }, t);
+                        },
+                        combine: function (t, r) {
+                            return [].concat(t, r);
+                        },
+                        compact: function (t) {
+                            for (var r = [{ obj: { o: t }, prop: "o" }], e = [], n = 0; n < r.length; ++n)
+                                for (var o = r[n], i = o.obj[o.prop], u = Object.keys(i), f = 0; f < u.length; ++f) {
+                                    var a = u[f],
+                                        c = i[a];
+                                    "object" == typeof c && null !== c && -1 === e.indexOf(c) && (r.push({ obj: i, prop: a }), e.push(c));
+                                }
+                            return (
+                                (function (t) {
+                                    for (; t.length > 1; ) {
+                                        var r = t.pop(),
+                                            e = r.obj[r.prop];
+                                        if (p(e)) {
+                                            for (var n = [], o = 0; o < e.length; ++o) void 0 !== e[o] && n.push(e[o]);
+                                            r.obj[r.prop] = n;
+                                        }
+                                    }
+                                })(r),
+                                t
+                            );
+                        },
+                        decode: function (t, r, e) {
+                            var n = t.replace(/\+/g, " ");
+                            if ("iso-8859-1" === e) return n.replace(/%[0-9a-f]{2}/gi, unescape);
+                            try {
+                                return decodeURIComponent(n);
+                            } catch (t) {
+                                return n;
+                            }
+                        },
+                        encode: function (t, r, e, n, o) {
+                            if (0 === t.length) return t;
+                            var i = t;
+                            if (("symbol" == typeof t ? (i = Symbol.prototype.toString.call(t)) : "string" != typeof t && (i = String(t)), "iso-8859-1" === e))
+                                return escape(i).replace(/%u[0-9a-f]{4}/gi, function (t) {
+                                    return "%26%23" + parseInt(t.slice(2), 16) + "%3B";
+                                });
+                            for (var u = "", f = 0; f < i.length; ++f) {
+                                var a = i.charCodeAt(f);
+                                45 === a ||
+                                46 === a ||
+                                95 === a ||
+                                126 === a ||
+                                (a >= 48 && a <= 57) ||
+                                (a >= 65 && a <= 90) ||
+                                (a >= 97 && a <= 122) ||
+                                (o === s.RFC1738 && (40 === a || 41 === a))
+                                    ? (u += i.charAt(f))
+                                    : a < 128
+                                      ? (u += y[a])
+                                      : a < 2048
+                                        ? (u += y[192 | (a >> 6)] + y[128 | (63 & a)])
+                                        : a < 55296 || a >= 57344
+                                          ? (u += y[224 | (a >> 12)] + y[128 | ((a >> 6) & 63)] + y[128 | (63 & a)])
+                                          : ((a = 65536 + (((1023 & a) << 10) | (1023 & i.charCodeAt((f += 1))))),
+                                            (u += y[240 | (a >> 18)] + y[128 | ((a >> 12) & 63)] + y[128 | ((a >> 6) & 63)] + y[128 | (63 & a)]));
+                            }
+                            return u;
+                        },
+                        isBuffer: function (t) {
+                            return !(!t || "object" != typeof t || !(t.constructor && t.constructor.isBuffer && t.constructor.isBuffer(t)));
+                        },
+                        isRegExp: function (t) {
+                            return "[object RegExp]" === Object.prototype.toString.call(t);
+                        },
+                        maybeMap: function (t, r) {
+                            if (p(t)) {
+                                for (var e = [], n = 0; n < t.length; n += 1) e.push(r(t[n]));
+                                return e;
+                            }
+                            return r(t);
+                        },
+                        merge: function t(r, e, n) {
+                            if (!e) return r;
+                            if ("object" != typeof e) {
+                                if (p(r)) r.push(e);
+                                else {
+                                    if (!r || "object" != typeof r) return [r, e];
+                                    ((n && (n.plainObjects || n.allowPrototypes)) || !v.call(Object.prototype, e)) && (r[e] = !0);
+                                }
+                                return r;
+                            }
+                            if (!r || "object" != typeof r) return [r].concat(e);
+                            var o = r;
+                            return (
+                                p(r) && !p(e) && (o = d(r, n)),
+                                p(r) && p(e)
+                                    ? (e.forEach(function (e, o) {
+                                          if (v.call(r, o)) {
+                                              var i = r[o];
+                                              i && "object" == typeof i && e && "object" == typeof e ? (r[o] = t(i, e, n)) : r.push(e);
+                                          } else r[o] = e;
+                                      }),
+                                      r)
+                                    : Object.keys(e).reduce(function (r, o) {
+                                          var i = e[o];
+                                          return (r[o] = v.call(r, o) ? t(r[o], i, n) : i), r;
+                                      }, o)
+                            );
+                        },
+                    },
+                    h = Object.prototype.hasOwnProperty,
+                    m = {
+                        brackets: function (t) {
+                            return t + "[]";
+                        },
+                        comma: "comma",
+                        indices: function (t, r) {
+                            return t + "[" + r + "]";
+                        },
+                        repeat: function (t) {
+                            return t;
+                        },
+                    },
+                    g = Array.isArray,
+                    j = String.prototype.split,
+                    w = Array.prototype.push,
+                    O = function (t, r) {
+                        w.apply(t, g(r) ? r : [r]);
+                    },
+                    E = Date.prototype.toISOString,
+                    R = s.default,
+                    S = {
+                        addQueryPrefix: !1,
+                        allowDots: !1,
+                        charset: "utf-8",
+                        charsetSentinel: !1,
+                        delimiter: "&",
+                        encode: !0,
+                        encoder: b.encode,
+                        encodeValuesOnly: !1,
+                        format: R,
+                        formatter: s.formatters[R],
+                        indices: !1,
+                        serializeDate: function (t) {
+                            return E.call(t);
+                        },
+                        skipNulls: !1,
+                        strictNullHandling: !1,
+                    },
+                    T = function t(r, e, n, o, i, u, f, a, c, l, s, v, p, y) {
+                        var d,
+                            h = r;
+                        if (
+                            ("function" == typeof f
+                                ? (h = f(e, h))
+                                : h instanceof Date
+                                  ? (h = l(h))
+                                  : "comma" === n &&
+                                    g(h) &&
+                                    (h = b.maybeMap(h, function (t) {
+                                        return t instanceof Date ? l(t) : t;
+                                    })),
+                            null === h)
+                        ) {
+                            if (o) return u && !p ? u(e, S.encoder, y, "key", s) : e;
+                            h = "";
+                        }
+                        if ("string" == typeof (d = h) || "number" == typeof d || "boolean" == typeof d || "symbol" == typeof d || "bigint" == typeof d || b.isBuffer(h)) {
+                            if (u) {
+                                var m = p ? e : u(e, S.encoder, y, "key", s);
+                                if ("comma" === n && p) {
+                                    for (var w = j.call(String(h), ","), E = "", R = 0; R < w.length; ++R) E += (0 === R ? "" : ",") + v(u(w[R], S.encoder, y, "value", s));
+                                    return [v(m) + "=" + E];
+                                }
+                                return [v(m) + "=" + v(u(h, S.encoder, y, "value", s))];
+                            }
+                            return [v(e) + "=" + v(String(h))];
+                        }
+                        var T,
+                            k = [];
+                        if (void 0 === h) return k;
+                        if ("comma" === n && g(h)) T = [{ value: h.length > 0 ? h.join(",") || null : void 0 }];
+                        else if (g(f)) T = f;
+                        else {
+                            var x = Object.keys(h);
+                            T = a ? x.sort(a) : x;
+                        }
+                        for (var N = 0; N < T.length; ++N) {
+                            var C = T[N],
+                                D = "object" == typeof C && void 0 !== C.value ? C.value : h[C];
+                            if (!i || null !== D) {
+                                var F = g(h) ? ("function" == typeof n ? n(e, C) : e) : e + (c ? "." + C : "[" + C + "]");
+                                O(k, t(D, F, n, o, i, u, f, a, c, l, s, v, p, y));
+                            }
+                        }
+                        return k;
+                    },
+                    k = Object.prototype.hasOwnProperty,
+                    x = Array.isArray,
+                    N = {
+                        allowDots: !1,
+                        allowPrototypes: !1,
+                        arrayLimit: 20,
+                        charset: "utf-8",
+                        charsetSentinel: !1,
+                        comma: !1,
+                        decoder: b.decode,
+                        delimiter: "&",
+                        depth: 5,
+                        ignoreQueryPrefix: !1,
+                        interpretNumericEntities: !1,
+                        parameterLimit: 1e3,
+                        parseArrays: !0,
+                        plainObjects: !1,
+                        strictNullHandling: !1,
+                    },
+                    C = function (t) {
+                        return t.replace(/&#(\d+);/g, function (t, r) {
+                            return String.fromCharCode(parseInt(r, 10));
+                        });
+                    },
+                    D = function (t, r) {
+                        return t && "string" == typeof t && r.comma && t.indexOf(",") > -1 ? t.split(",") : t;
+                    },
+                    F = function (t, r, e, n) {
+                        if (t) {
+                            var o = e.allowDots ? t.replace(/\.([^.[]+)/g, "[$1]") : t,
+                                i = /(\[[^[\]]*])/g,
+                                u = e.depth > 0 && /(\[[^[\]]*])/.exec(o),
+                                f = u ? o.slice(0, u.index) : o,
+                                a = [];
+                            if (f) {
+                                if (!e.plainObjects && k.call(Object.prototype, f) && !e.allowPrototypes) return;
+                                a.push(f);
+                            }
+                            for (var c = 0; e.depth > 0 && null !== (u = i.exec(o)) && c < e.depth; ) {
+                                if (((c += 1), !e.plainObjects && k.call(Object.prototype, u[1].slice(1, -1)) && !e.allowPrototypes)) return;
+                                a.push(u[1]);
+                            }
+                            return (
+                                u && a.push("[" + o.slice(u.index) + "]"),
+                                (function (t, r, e, n) {
+                                    for (var o = n ? r : D(r, e), i = t.length - 1; i >= 0; --i) {
+                                        var u,
+                                            f = t[i];
+                                        if ("[]" === f && e.parseArrays) u = [].concat(o);
+                                        else {
+                                            u = e.plainObjects ? Object.create(null) : {};
+                                            var a = "[" === f.charAt(0) && "]" === f.charAt(f.length - 1) ? f.slice(1, -1) : f,
+                                                c = parseInt(a, 10);
+                                            e.parseArrays || "" !== a
+                                                ? !isNaN(c) && f !== a && String(c) === a && c >= 0 && e.parseArrays && c <= e.arrayLimit
+                                                    ? ((u = [])[c] = o)
+                                                    : "__proto__" !== a && (u[a] = o)
+                                                : (u = { 0: o });
+                                        }
+                                        o = u;
+                                    }
+                                    return o;
+                                })(a, r, e, n)
+                            );
+                        }
+                    },
+                    $ = function (t, r) {
+                        var e = (function (t) {
+                            if (!t) return N;
+                            if (null != t.decoder && "function" != typeof t.decoder) throw new TypeError("Decoder has to be a function.");
+                            if (void 0 !== t.charset && "utf-8" !== t.charset && "iso-8859-1" !== t.charset)
+                                throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
+                            return {
+                                allowDots: void 0 === t.allowDots ? N.allowDots : !!t.allowDots,
+                                allowPrototypes: "boolean" == typeof t.allowPrototypes ? t.allowPrototypes : N.allowPrototypes,
+                                arrayLimit: "number" == typeof t.arrayLimit ? t.arrayLimit : N.arrayLimit,
+                                charset: void 0 === t.charset ? N.charset : t.charset,
+                                charsetSentinel: "boolean" == typeof t.charsetSentinel ? t.charsetSentinel : N.charsetSentinel,
+                                comma: "boolean" == typeof t.comma ? t.comma : N.comma,
+                                decoder: "function" == typeof t.decoder ? t.decoder : N.decoder,
+                                delimiter: "string" == typeof t.delimiter || b.isRegExp(t.delimiter) ? t.delimiter : N.delimiter,
+                                depth: "number" == typeof t.depth || !1 === t.depth ? +t.depth : N.depth,
+                                ignoreQueryPrefix: !0 === t.ignoreQueryPrefix,
+                                interpretNumericEntities: "boolean" == typeof t.interpretNumericEntities ? t.interpretNumericEntities : N.interpretNumericEntities,
+                                parameterLimit: "number" == typeof t.parameterLimit ? t.parameterLimit : N.parameterLimit,
+                                parseArrays: !1 !== t.parseArrays,
+                                plainObjects: "boolean" == typeof t.plainObjects ? t.plainObjects : N.plainObjects,
+                                strictNullHandling: "boolean" == typeof t.strictNullHandling ? t.strictNullHandling : N.strictNullHandling,
+                            };
+                        })(r);
+                        if ("" === t || null == t) return e.plainObjects ? Object.create(null) : {};
+                        for (
+                            var n =
+                                    "string" == typeof t
+                                        ? (function (t, r) {
+                                              var e,
+                                                  n = {},
+                                                  o = (r.ignoreQueryPrefix ? t.replace(/^\?/, "") : t).split(
+                                                      r.delimiter,
+                                                      Infinity === r.parameterLimit ? void 0 : r.parameterLimit
+                                                  ),
+                                                  i = -1,
+                                                  u = r.charset;
+                                              if (r.charsetSentinel)
+                                                  for (e = 0; e < o.length; ++e)
+                                                      0 === o[e].indexOf("utf8=") &&
+                                                          ("utf8=%E2%9C%93" === o[e] ? (u = "utf-8") : "utf8=%26%2310003%3B" === o[e] && (u = "iso-8859-1"),
+                                                          (i = e),
+                                                          (e = o.length));
+                                              for (e = 0; e < o.length; ++e)
+                                                  if (e !== i) {
+                                                      var f,
+                                                          a,
+                                                          c = o[e],
+                                                          l = c.indexOf("]="),
+                                                          s = -1 === l ? c.indexOf("=") : l + 1;
+                                                      -1 === s
+                                                          ? ((f = r.decoder(c, N.decoder, u, "key")), (a = r.strictNullHandling ? null : ""))
+                                                          : ((f = r.decoder(c.slice(0, s), N.decoder, u, "key")),
+                                                            (a = b.maybeMap(D(c.slice(s + 1), r), function (t) {
+                                                                return r.decoder(t, N.decoder, u, "value");
+                                                            }))),
+                                                          a && r.interpretNumericEntities && "iso-8859-1" === u && (a = C(a)),
+                                                          c.indexOf("[]=") > -1 && (a = x(a) ? [a] : a),
+                                                          (n[f] = k.call(n, f) ? b.combine(n[f], a) : a);
+                                                  }
+                                              return n;
+                                          })(t, e)
+                                        : t,
+                                o = e.plainObjects ? Object.create(null) : {},
+                                i = Object.keys(n),
+                                u = 0;
+                            u < i.length;
+                            ++u
+                        ) {
+                            var f = i[u],
+                                a = F(f, n[f], e, "string" == typeof t);
+                            o = b.merge(o, a, e);
+                        }
+                        return b.compact(o);
+                    },
+                    A = /*#__PURE__*/ (function () {
+                        function t(t, r, e) {
+                            var n, o;
+                            (this.name = t),
+                                (this.definition = r),
+                                (this.bindings = null != (n = r.bindings) ? n : {}),
+                                (this.wheres = null != (o = r.wheres) ? o : {}),
+                                (this.config = e);
+                        }
+                        var e = t.prototype;
+                        return (
+                            (e.matchesUrl = function (t) {
+                                var r = this;
+                                if (!this.definition.methods.includes("GET")) return !1;
+                                var e = this.template
+                                        .replace(/(\/?){([^}?]*)(\??)}/g, function (t, e, n, o) {
+                                            var i,
+                                                u = "(?<" + n + ">" + ((null == (i = r.wheres[n]) ? void 0 : i.replace(/(^\^)|(\$$)/g, "")) || "[^/?]+") + ")";
+                                            return o ? "(" + e + u + ")?" : "" + e + u;
+                                        })
+                                        .replace(/^\w+:\/\//, ""),
+                                    n = t.replace(/^\w+:\/\//, "").split("?"),
+                                    o = n[0],
+                                    i = n[1],
+                                    u = new RegExp("^" + e + "/?$").exec(o);
+                                return !!u && { params: u.groups, query: $(i) };
+                            }),
+                            (e.compile = function (t) {
+                                var r = this,
+                                    e = this.parameterSegments;
+                                return e.length
+                                    ? this.template
+                                          .replace(/{([^}?]+)(\??)}/g, function (n, o, i) {
+                                              var u, f, a;
+                                              if (!i && [null, void 0].includes(t[o]))
+                                                  throw new Error("Ziggy error: '" + o + "' parameter is required for route '" + r.name + "'.");
+                                              if (e[e.length - 1].name === o && ".*" === r.wheres[o]) return encodeURIComponent(null != (a = t[o]) ? a : "").replace(/%2F/g, "/");
+                                              if (r.wheres[o] && !new RegExp("^" + (i ? "(" + r.wheres[o] + ")?" : r.wheres[o]) + "$").test(null != (u = t[o]) ? u : ""))
+                                                  throw new Error(
+                                                      "Ziggy error: '" + o + "' parameter does not match required format '" + r.wheres[o] + "' for route '" + r.name + "'."
+                                                  );
+                                              return encodeURIComponent(null != (f = t[o]) ? f : "");
+                                          })
+                                          .replace(/\/+$/, "")
+                                    : this.template;
+                            }),
+                            r(t, [
+                                {
+                                    key: "template",
+                                    get: function () {
+                                        return (
+                                            (this.config.absolute
+                                                ? this.definition.domain
+                                                    ? "" + this.config.url.match(/^\w+:\/\//)[0] + this.definition.domain + (this.config.port ? ":" + this.config.port : "")
+                                                    : this.config.url
+                                                : "") +
+                                            "/" +
+                                            this.definition.uri
+                                        ).replace(/\/+$/, "");
+                                    },
+                                },
+                                {
+                                    key: "parameterSegments",
+                                    get: function () {
+                                        var t, r;
+                                        return null !=
+                                            (t =
+                                                null == (r = this.template.match(/{[^}?]+\??}/g))
+                                                    ? void 0
+                                                    : r.map(function (t) {
+                                                          return { name: t.replace(/{|\??}/g, ""), required: !/\?}$/.test(t) };
+                                                      }))
+                                            ? t
+                                            : [];
+                                    },
+                                },
+                            ]),
+                            t
+                        );
+                    })(),
+                    P = /*#__PURE__*/ (function (t) {
+                        var n, i;
+                        function u(r, n, o, i) {
+                            var u;
+                            if (
+                                (void 0 === o && (o = !0),
+                                ((u = t.call(this) || this).t = null != i ? i : "undefined" != typeof Ziggy ? Ziggy : null == globalThis ? void 0 : globalThis.Ziggy),
+                                (u.t = e({}, u.t, { absolute: o })),
+                                r)
+                            ) {
+                                if (!u.t.routes[r]) throw new Error("Ziggy error: route '" + r + "' is not in the route list.");
+                                (u.i = new A(r, u.t.routes[r], u.t)), (u.u = u.l(n));
+                            }
+                            return u;
+                        }
+                        (i = t), ((n = u).prototype = Object.create(i.prototype)), (n.prototype.constructor = n), o(n, i);
+                        var f = u.prototype;
+                        return (
+                            (f.toString = function () {
+                                var t = this,
+                                    r = Object.keys(this.u)
+                                        .filter(function (r) {
+                                            return !t.i.parameterSegments.some(function (t) {
+                                                return t.name === r;
+                                            });
+                                        })
+                                        .filter(function (t) {
+                                            return "_query" !== t;
+                                        })
+                                        .reduce(function (r, n) {
+                                            var o;
+                                            return e({}, r, (((o = {})[n] = t.u[n]), o));
+                                        }, {});
+                                return (
+                                    this.i.compile(this.u) +
+                                    (function (t, r) {
+                                        var e,
+                                            n = t,
+                                            o = (function (t) {
+                                                if (!t) return S;
+                                                if (null != t.encoder && "function" != typeof t.encoder) throw new TypeError("Encoder has to be a function.");
+                                                var r = t.charset || S.charset;
+                                                if (void 0 !== t.charset && "utf-8" !== t.charset && "iso-8859-1" !== t.charset)
+                                                    throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
+                                                var e = s.default;
+                                                if (void 0 !== t.format) {
+                                                    if (!h.call(s.formatters, t.format)) throw new TypeError("Unknown format option provided.");
+                                                    e = t.format;
+                                                }
+                                                var n = s.formatters[e],
+                                                    o = S.filter;
+                                                return (
+                                                    ("function" == typeof t.filter || g(t.filter)) && (o = t.filter),
+                                                    {
+                                                        addQueryPrefix: "boolean" == typeof t.addQueryPrefix ? t.addQueryPrefix : S.addQueryPrefix,
+                                                        allowDots: void 0 === t.allowDots ? S.allowDots : !!t.allowDots,
+                                                        charset: r,
+                                                        charsetSentinel: "boolean" == typeof t.charsetSentinel ? t.charsetSentinel : S.charsetSentinel,
+                                                        delimiter: void 0 === t.delimiter ? S.delimiter : t.delimiter,
+                                                        encode: "boolean" == typeof t.encode ? t.encode : S.encode,
+                                                        encoder: "function" == typeof t.encoder ? t.encoder : S.encoder,
+                                                        encodeValuesOnly: "boolean" == typeof t.encodeValuesOnly ? t.encodeValuesOnly : S.encodeValuesOnly,
+                                                        filter: o,
+                                                        format: e,
+                                                        formatter: n,
+                                                        serializeDate: "function" == typeof t.serializeDate ? t.serializeDate : S.serializeDate,
+                                                        skipNulls: "boolean" == typeof t.skipNulls ? t.skipNulls : S.skipNulls,
+                                                        sort: "function" == typeof t.sort ? t.sort : null,
+                                                        strictNullHandling: "boolean" == typeof t.strictNullHandling ? t.strictNullHandling : S.strictNullHandling,
+                                                    }
+                                                );
+                                            })(r);
+                                        "function" == typeof o.filter ? (n = (0, o.filter)("", n)) : g(o.filter) && (e = o.filter);
+                                        var i = [];
+                                        if ("object" != typeof n || null === n) return "";
+                                        var u = m[r && r.arrayFormat in m ? r.arrayFormat : r && "indices" in r ? (r.indices ? "indices" : "repeat") : "indices"];
+                                        e || (e = Object.keys(n)), o.sort && e.sort(o.sort);
+                                        for (var f = 0; f < e.length; ++f) {
+                                            var a = e[f];
+                                            (o.skipNulls && null === n[a]) ||
+                                                O(
+                                                    i,
+                                                    T(
+                                                        n[a],
+                                                        a,
+                                                        u,
+                                                        o.strictNullHandling,
+                                                        o.skipNulls,
+                                                        o.encode ? o.encoder : null,
+                                                        o.filter,
+                                                        o.sort,
+                                                        o.allowDots,
+                                                        o.serializeDate,
+                                                        o.format,
+                                                        o.formatter,
+                                                        o.encodeValuesOnly,
+                                                        o.charset
+                                                    )
+                                                );
+                                        }
+                                        var c = i.join(o.delimiter),
+                                            l = !0 === o.addQueryPrefix ? "?" : "";
+                                        return o.charsetSentinel && (l += "iso-8859-1" === o.charset ? "utf8=%26%2310003%3B&" : "utf8=%E2%9C%93&"), c.length > 0 ? l + c : "";
+                                    })(e({}, r, this.u._query), {
+                                        addQueryPrefix: !0,
+                                        arrayFormat: "indices",
+                                        encodeValuesOnly: !0,
+                                        skipNulls: !0,
+                                        encoder: function (t, r) {
+                                            return "boolean" == typeof t ? Number(t) : r(t);
+                                        },
+                                    })
+                                );
+                            }),
+                            (f.v = function (t) {
+                                var r = this;
+                                t ? this.t.absolute && t.startsWith("/") && (t = this.p().host + t) : (t = this.h());
+                                var n = {},
+                                    o = Object.entries(this.t.routes).find(function (e) {
+                                        return (n = new A(e[0], e[1], r.t).matchesUrl(t));
+                                    }) || [void 0, void 0];
+                                return e({ name: o[0] }, n, { route: o[1] });
+                            }),
+                            (f.h = function () {
+                                var t = this.p(),
+                                    r = t.pathname,
+                                    e = t.search;
+                                return (this.t.absolute ? t.host + r : r.replace(this.t.url.replace(/^\w*:\/\/[^/]+/, ""), "").replace(/^\/+/, "/")) + e;
+                            }),
+                            (f.current = function (t, r) {
+                                var n = this.v(),
+                                    o = n.name,
+                                    i = n.params,
+                                    u = n.query,
+                                    f = n.route;
+                                if (!t) return o;
+                                var a = new RegExp("^" + t.replace(/\./g, "\\.").replace(/\*/g, ".*") + "$").test(o);
+                                if ([null, void 0].includes(r) || !a) return a;
+                                var c = new A(o, f, this.t);
+                                r = this.l(r, c);
+                                var l = e({}, i, u);
+                                return (
+                                    !(
+                                        !Object.values(r).every(function (t) {
+                                            return !t;
+                                        }) ||
+                                        Object.values(l).some(function (t) {
+                                            return void 0 !== t;
+                                        })
+                                    ) ||
+                                    Object.entries(r).every(function (t) {
+                                        return l[t[0]] == t[1];
+                                    })
+                                );
+                            }),
+                            (f.p = function () {
+                                var t,
+                                    r,
+                                    e,
+                                    n,
+                                    o,
+                                    i,
+                                    u = "undefined" != typeof window ? window.location : {},
+                                    f = u.host,
+                                    a = u.pathname,
+                                    c = u.search;
+                                return {
+                                    host: null != (t = null == (r = this.t.location) ? void 0 : r.host) ? t : void 0 === f ? "" : f,
+                                    pathname: null != (e = null == (n = this.t.location) ? void 0 : n.pathname) ? e : void 0 === a ? "" : a,
+                                    search: null != (o = null == (i = this.t.location) ? void 0 : i.search) ? o : void 0 === c ? "" : c,
+                                };
+                            }),
+                            (f.has = function (t) {
+                                return Object.keys(this.t.routes).includes(t);
+                            }),
+                            (f.l = function (t, r) {
+                                var n = this;
+                                void 0 === t && (t = {}), void 0 === r && (r = this.i), null != t || (t = {}), (t = ["string", "number"].includes(typeof t) ? [t] : t);
+                                var o = r.parameterSegments.filter(function (t) {
+                                    return !n.t.defaults[t.name];
+                                });
+                                if (Array.isArray(t))
+                                    t = t.reduce(function (t, r, n) {
+                                        var i, u;
+                                        return e({}, t, o[n] ? (((i = {})[o[n].name] = r), i) : "object" == typeof r ? r : (((u = {})[r] = ""), u));
+                                    }, {});
+                                else if (1 === o.length && !t[o[0].name] && (t.hasOwnProperty(Object.values(r.bindings)[0]) || t.hasOwnProperty("id"))) {
+                                    var i;
+                                    ((i = {})[o[0].name] = t), (t = i);
+                                }
+                                return e({}, this.m(r), this.g(t, r));
+                            }),
+                            (f.m = function (t) {
+                                var r = this;
+                                return t.parameterSegments
+                                    .filter(function (t) {
+                                        return r.t.defaults[t.name];
+                                    })
+                                    .reduce(function (t, n, o) {
+                                        var i,
+                                            u = n.name;
+                                        return e({}, t, (((i = {})[u] = r.t.defaults[u]), i));
+                                    }, {});
+                            }),
+                            (f.g = function (t, r) {
+                                var n = r.bindings,
+                                    o = r.parameterSegments;
+                                return Object.entries(t).reduce(function (t, r) {
+                                    var i,
+                                        u,
+                                        f = r[0],
+                                        a = r[1];
+                                    if (
+                                        !a ||
+                                        "object" != typeof a ||
+                                        Array.isArray(a) ||
+                                        !o.some(function (t) {
+                                            return t.name === f;
+                                        })
+                                    )
+                                        return e({}, t, (((u = {})[f] = a), u));
+                                    if (!a.hasOwnProperty(n[f])) {
+                                        if (!a.hasOwnProperty("id"))
+                                            throw new Error("Ziggy error: object passed as '" + f + "' parameter is missing route model binding key '" + n[f] + "'.");
+                                        n[f] = "id";
+                                    }
+                                    return e({}, t, (((i = {})[f] = a[n[f]]), i));
+                                }, {});
+                            }),
+                            (f.valueOf = function () {
+                                return this.toString();
+                            }),
+                            (f.check = function (t) {
+                                return this.has(t);
+                            }),
+                            r(u, [
+                                {
+                                    key: "params",
+                                    get: function () {
+                                        var t = this.v();
+                                        return e({}, t.params, t.query);
+                                    },
+                                },
+                            ]),
+                            u
+                        );
+                    })(/*#__PURE__*/ f(String));
+                return function (t, r, e, n) {
+                    var o = new P(t, r, e, n);
+                    return t ? o.toString() : o;
+                };
+            });
+        </script>
+        <script type="module" src="https://app.formbold.com/build/assets/app.902300ac.js"></script>
+        <link rel="stylesheet" href="https://app.formbold.com/build/assets/app.f5c7ca5b.css" />
+        <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+        <script type="text/javascript">
+            Paddle.Setup({ vendor: 138827 });
+        </script>
+
+        <script async defer data-website-id="53bd45e0-9446-4400-beda-a303746c5c7c" src="https://analytics.meta.pimjo.com/umami.js"></script>
+    </head>
+
+    <body>
+        <div
+            id="app"
+            data-page='{"component":"SubmissionResponse\/RecaptchaResponse","props":{"title":"Almost there \ud83d\ude0a","message":"Please, help us to fight spam by \u2705checking the box from below \ud83d\udc47","submittedData":{"name":"q\u01b0dqwdqw","email":"wdqw@gagag","subject":"d\u01b0qqwdqwdqw","message":"q\u01b0dqwdqwdqw\u01b0q dqw dqw d\u01b0 q"},"form":{"email_address_id":10717,"name":"portfolio","redirect_url":null,"recaptcha_public_key":null,"is_active":true,"is_submissions_store_enabled":true,"is_email_notifications_enabled":true,"is_spam_filter_enabled":false,"is_recaptcha_enabled":false,"created_at":"2024-05-08T15:29:25.000000Z","updated_at":"2024-05-08T15:30:02.000000Z","user_id":9258,"is_api_access_enabled":false,"export_requested_at":null,"export_completed_at":null,"export_file_name":null,"email_subject":"New submission for portfolio","is_allowed_domain_enabled":false,"is_default_recaptcha_enabled":true,"email_logo_url":null,"show_custom_email_logo":false,"additional_emails":null,"contents_save_completed_at":null,"contents_save_requested_at":null,"form_contents_embedded_file_visibility":null,"form_contents_embedded_file_name":null,"contents_file_name":null,"route_key":"3qR1O","endpoint_url":"https:\/\/app.formbold.com\/s\/3qR1O","user":{"id":9258,"name":"Th\u1eafng Nguy\u1ec5n","two_factor_secret":null,"two_factor_recovery_codes":null,"created_at":"2024-05-08T15:24:31.000000Z","updated_at":"2024-05-08T15:24:31.000000Z","provider":"google","submissions_count":0,"image_url":null,"timezone":null,"deleted_at":null,"force_logout":0,"forms_count":1,"email":"nmthangdn2000@gmail.com","plan":{"paddle_plan":748455,"name":"Free","price":"0.00","previous_price":null,"image":"&lt;svg viewBox=\"0 0 60 60\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"&gt;&lt;path opacity=\"0.4\" d=\"M7.5 32.185V47.5C7.5 51.642 10.8579 55 15 55H45C49.1423 55 52.5 51.642 52.5 47.5V32.185C51.701 32.3905 50.8633 32.5 50 32.5H10C9.13675 32.5 8.29905 32.3905 7.5 32.185Z\" fill=\"#6A64F1\"&gt;&lt;\/path&gt;&lt;path opacity=\"0.4\" d=\"M5 20C5 17.2386 7.23858 15 10 15H50C52.7615 15 55 17.2386 55 20V22.5C55 25.2615 52.7615 27.5 50 27.5H10C7.23858 27.5 5 25.2615 5 22.5V20Z\" fill=\"#6A64F1\"&gt;&lt;\/path&gt;&lt;path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M30 8.75L27.0278 5.03478C25.746 3.43265 23.8056 2.5 21.7539 2.5H21.25C17.7982 2.5 15 5.29823 15 8.75C15 12.2018 17.7982 15 21.25 15H27.5V55H32.5V15H38.75C42.2017 15 45 12.2018 45 8.75C45 5.29823 42.2017 2.5 38.75 2.5H38.246C36.1943 2.5 34.254 3.43265 32.9722 5.03478L30 8.75ZM24.5969 10L23.1235 8.15825C22.7906 7.7422 22.2867 7.5 21.7539 7.5H21.25C20.5596 7.5 20 8.05965 20 8.75C20 9.44035 20.5596 10 21.25 10H24.5969ZM35.403 10L36.8765 8.15825C37.2092 7.7422 37.7132 7.5 38.246 7.5H38.75C39.4403 7.5 40 8.05965 40 8.75C40 9.44035 39.4403 10 38.75 10H35.403Z\" fill=\"#6A64F1\"&gt;&lt;\/path&gt;&lt;\/svg&gt;","color":"primary","forms_count":5,"submissions_count":100,"email_addresses_count":2,"recaptcha":1,"plugins":0,"attachments":0,"redirect":0,"autoresponder":0,"api":0,"remove_branding":false,"support":0,"created_at":"2022-01-19T14:39:45.000000Z","updated_at":"2022-10-09T17:49:34.000000Z","description":"Best Suited for Personal and Hobby Projects","is_monthly":0,"email_subject":0,"allowed_domains":0,"form_multiple_emails_support":0,"features":{"redirect":false,"remove_branding":false,"api":false,"attachments":false,"recaptcha":true,"plugins":false,"support":false,"autoresponder":false,"allowed_domains":false,"email_subject":false,"form_multiple_emails_support":false}},"email_address":{"id":10717,"user_id":9258,"email":"nmthangdn2000@gmail.com","created_at":"2024-05-08T15:24:31.000000Z","updated_at":"2024-05-08T15:24:31.000000Z","verified_at":1715181871,"verified":true},"subscriptions":[]}},"showBranding":true,"showCustomEmailLogo":false,"customLogo":null},"url":"\/s\/3qR1O","version":""}'
+        ></div>
+    </body>
+</html>

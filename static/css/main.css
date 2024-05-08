@@ -2299,15 +2299,15 @@ ul.social-links li:last-child a {
 }
 
 .skills-first-style .skill-value .skill-level .level-item.level-1 {
-    background-color: #bff1db;
+    background-color: rgba(255, 193, 0, 0.3);
 }
 
 .skills-first-style .skill-value .skill-level .level-item.level-2 {
-    background-color: #5cda93;
+    background-color: rgba(255, 193, 0, 0.6);
 }
 
 .skills-first-style .skill-value .skill-level .level-item.level-3 {
-    background-color: #28a745;
+    background-color: rgba(255, 193, 0, 1);
 }
 
 /* =======================================

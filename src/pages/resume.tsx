@@ -30,40 +30,28 @@ const ResumePage: React.FC<PageProps> = () => {
             level: "advanced",
         },
         {
-            name: "JavaScript",
+            name: "JavaScript / TypeScript",
             level: "advanced",
         },
         {
-            name: "ReactJS / NextJS / GastbyJS",
+            name: "React Native / ReactJS / NextJS",
             level: "advanced",
         },
         {
-            name: "Smart Contract / D-App",
+            name: "NodeJS / ExpressJS / NestJS",
             level: "advanced",
         },
         {
-            name: "Python",
-            level: "advanced",
-        },
-        {
-            name: "Tensorflow",
+            name: "Flutter",
             level: "intermediate",
         },
         {
-            name: "System Architecture",
+            name: "MongoDB",
             level: "intermediate",
         },
         {
-            name: "Database Design",
+            name: "SQL",
             level: "intermediate",
-        },
-        {
-            name: "Data Analysis",
-            level: "intermediate",
-        },
-        {
-            name: "C#",
-            level: "beginner",
         },
     ];
 
@@ -85,29 +73,34 @@ const ResumePage: React.FC<PageProps> = () => {
         tooltip: string;
     }[] = [
         {
-            name: "UI/UX Design",
+            name: "Git / GitHub / GitLab / Bitbucket",
             level: "advanced",
-            tooltip: "Can design a website, mobile app, etc.",
+            tooltip: "Familiar with Git commands and workflows",
         },
         {
-            name: "Graphic Design",
+            name: "Docker",
             level: "intermediate",
-            tooltip: "Can design a logo, poster, banner, etc.",
+            tooltip: "Familiar with Docker",
+        },
+        {
+            name: "CI/CD",
+            level: "intermediate",
+            tooltip: "Familiar with CI/CD",
+        },
+        {
+            name: "Design Database",
+            level: "intermediate",
+            tooltip: "Familiar with design database",
         },
         {
             name: "Problem Solving",
-            level: "advanced",
-            tooltip: "Give idea & solve problems quickly",
+            level: "intermediate",
+            tooltip: "Good at problem solving",
         },
         {
             name: "Teamwork",
             level: "intermediate",
-            tooltip: "Work well with 3-5 people in a team",
-        },
-        {
-            name: "Communication",
-            level: "intermediate",
-            tooltip: "Can communicate in English and Vietnamese",
+            tooltip: "Good at teamwork",
         },
     ];
 
