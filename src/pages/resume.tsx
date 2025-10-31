@@ -153,10 +153,31 @@ const ResumePage: React.FC<PageProps> = () => {
                             <h2>Experience</h2>
                         </div>
 
+                        <div className="timeline-item clearfix">
+                            <h5 className="item-period current">2024 - Present</h5>
+                            <a href="https://gtn-vietnam.com/" target="_blank" className="item-company">
+                                GLOBAL TRUST NETWORKS VIETNAM COMPANY LIMITED
+                            </a>
+                            <h4 className="item-title">Backend Developer</h4>
+                            <p>
+                                <strong>Backend Developer:</strong>
+                                Focused on developing and maintaining scalable backend systems and integrations. 
+                                Built robust APIs, managed background jobs using BullMQ, and optimized database performance. 
+                                Collaborated with cross-functional teams to design reliable infrastructures and deployment workflows.
+                            </p>
+                            <p>
+                                <strong>Tech stack: </strong>
+                                Worked with NestJS, PostgreSQL, and MySQL, leveraging Redis for caching and queues. 
+                                Implemented AWS services such as S3, ECR, ECS, and SES for automation and scalability. 
+                                Integrated with Salesforce and other third-party APIs. 
+                                Set up CI/CD pipelines using GitHub Actions and AWS for seamless deployment.
+                            </p>
+                        </div>
+
                         <div id="timeline_2" className="timeline clearfix">
                             <div className="timeline-item clearfix">
-                                <h5 className="item-period">2023 - Current</h5>
-                                <a href="https://dut.udn.vn/khoacntt" target="_blank" className="item-company">
+                                <h5 className="item-period">2023 - 2024</h5>
+                                <a href="https://vacsvietnam.com.vn/" target="_blank" className="item-company">
                                     VACS Vietnam Limited Liability Company
                                 </a>
                                 <h4 className="item-title">Full-Stack Web Developer:</h4>
@@ -205,27 +226,6 @@ const ResumePage: React.FC<PageProps> = () => {
                                 <p>
                                     Gained experience to leverage a deep understanding of the industry and its challenges. Constantly seeking innovative ways to advance our
                                     technology and its potential and using technology to solve real-world problems.
-                                </p>
-                            </div>
-
-                            <div className="timeline-item clearfix">
-                                <h5 className="item-period current">2023 - 2025</h5>
-                                <a href="https://gtn.ai/" target="_blank" className="item-company">
-                                    GTN
-                                </a>
-                                <h4 className="item-title">Backend Developer</h4>
-                                <p>
-                                    <strong>Backend Developer:</strong>
-                                    Focused on developing and maintaining scalable backend systems and integrations. 
-                                    Built robust APIs, managed background jobs using BullMQ, and optimized database performance. 
-                                    Collaborated with cross-functional teams to design reliable infrastructures and deployment workflows.
-                                </p>
-                                <p>
-                                    <strong>Tech stack: </strong>
-                                    Worked with NestJS, PostgreSQL, and MySQL, leveraging Redis for caching and queues. 
-                                    Implemented AWS services such as S3, ECR, ECS, and SES for automation and scalability. 
-                                    Integrated with Salesforce and other third-party APIs. 
-                                    Set up CI/CD pipelines using GitHub Actions and AWS for seamless deployment.
                                 </p>
                             </div>
                         </div>
