@@ -207,6 +207,27 @@ const ResumePage: React.FC<PageProps> = () => {
                                     technology and its potential and using technology to solve real-world problems.
                                 </p>
                             </div>
+
+                            <div className="timeline-item clearfix">
+                                <h5 className="item-period current">2023 - 2025</h5>
+                                <a href="https://gtn.ai/" target="_blank" className="item-company">
+                                    GTN
+                                </a>
+                                <h4 className="item-title">Backend Developer</h4>
+                                <p>
+                                    <strong>Backend Developer:</strong>
+                                    Focused on developing and maintaining scalable backend systems and integrations. 
+                                    Built robust APIs, managed background jobs using BullMQ, and optimized database performance. 
+                                    Collaborated with cross-functional teams to design reliable infrastructures and deployment workflows.
+                                </p>
+                                <p>
+                                    <strong>Tech stack: </strong>
+                                    Worked with NestJS, PostgreSQL, and MySQL, leveraging Redis for caching and queues. 
+                                    Implemented AWS services such as S3, ECR, ECS, and SES for automation and scalability. 
+                                    Integrated with Salesforce and other third-party APIs. 
+                                    Set up CI/CD pipelines using GitHub Actions and AWS for seamless deployment.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
